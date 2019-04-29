@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Low-Interaction Honeypot Traffic</title>
+	<link rel="stylesheet" href="bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+	<div id="main">
+		<div id="header">
+			<div id="logo">
+				<div id="logo_text">
+					<h1>Low-Interaction Honeypot Traffic</h1>
+					<h2>Modeling an Attacker's Search</h2>
+				</div><!-- logo_text -->
+			</div><!-- logo -->
+		</div><!-- header -->
+		<div id="menubar">
+			<div class="dropdown">
+				<h3><img src="images/menu_btn.png" style="height:25px; width:25px"/> </h3>
+				<div class="menu">
+					<ul>
+					<li class="selected"><a href="index.html">Home</a></li>
+					<li><a href="overview.html">Project Overview</a></li>
+					<li><a href="analysis.html">Analysis</a></li>
+					<li><a href="conclusion.html">Conclusion</a></li>
+                    <li><a href="about.html">About Me</a></li>
+					</ul>
+				</div><!-- menu -->
+			</div><!-- dropdown -->
+		</div><!-- menu_bar -->
+		<div id="site_content">
+			<div id="win1">
+                <button class="toggle active">EDA</button>
+                    <div id = "box1" style="display:block">
+                        <div class="btn-group">
+                              <button class="edabar">Basic Charts</button>   
+                              <button class="edascatter">Scatterplots</button>
+                              <button class="edainteract">Interaction Plot</button>
+                        </div><!-- btn-group -->
+
+                        <div id="edabar" style="height:700px; width: 1400px; padding: 10px 0 20px 80px;">
+                            <script type='text/javascript' src='https://us-east-1.online.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 1200px; height: 600px;'><object class='tableauViz' width='1200' height='600' style='display:none;'><param name='host_url' value='https%3A%2F%2Fus-east-1.online.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;sroberts' /><param name='name' value='DATS6501-Capstone&#47;BasicChartDashboard' /><param name='tabs' value='no' /><param name='toolbar' value='no' /><param name='showAppBanner' value='false' /><param name='filter' value='iframeSizedToWindow=true' /></object></div>
+                        </div><!-- bar -->
+
+                        <div id="edascatter" style="height:700px; width: 1400px; padding: 10px 0 20px 140px;">
+                        <script type='text/javascript' src='https://us-east-1.online.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 1000px; height: 600px;'><object class='tableauViz' width='1000' height='600' style='display:none;'><param name='host_url' value='https%3A%2F%2Fus-east-1.online.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;sroberts' /><param name='name' value='DATS6501-Capstone&#47;ScatterplotDashboard' /><param name='tabs' value='no' /><param name='toolbar' value='no' /><param name='showAppBanner' value='false' /><param name='filter' value='iframeSizedToWindow=true' /></object></div>
+                        </div><!-- scatter -->
+
+                        <div id="edainteract" style="height:700px; width: 1400px; padding: 10px 0 20px 150px;">
+                            <script type='text/javascript' src='https://us-east-1.online.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 1000px; height: 600px;'><object class='tableauViz' width='1000' height='600' style='display:none;'><param name='host_url' value='https%3A%2F%2Fus-east-1.online.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;sroberts' /><param name='name' value='DATS6501-Capstone&#47;dstportEventid_countryBar' /><param name='tabs' value='no' /><param name='toolbar' value='no' /><param name='showAppBanner' value='false' /><param name='filter' value='iframeSizedToWindow=true' /></object></div>
+                        </div><!-- interact -->
+						
+                    </div><!-- box1 -->
+                
+                
+                <button class="toggle active">Stat Tests</button>
+                    <div id = "box2" style="display:none">
+                        <p></p>
+                        <div class="btn-group">
+                              <button class="chi">Chi Square Tests</button>   
+                              <button class="cov">Covariance Matrix</button>
+                              <button class="poisson">Probability Distribution</button>
+                        </div><!-- btn-group -->
+
+                        <div id="chi" style="height:700px; width: 1400px; padding: 10px 0 20px 340px;">
+                              <script type='text/javascript' src='https://us-east-1.online.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 600px; height: 350px;'><object class='tableauViz' width='600' height='350' style='display:none;'><param name='host_url' value='https%3A%2F%2Fus-east-1.online.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;sroberts' /><param name='name' value='DATS6501-Capstone&#47;ChiSqrInd' /><param name='tabs' value='no' /><param name='toolbar' value='no' /><param name='showAppBanner' value='false' /><param name='filter' value='iframeSizedToWindow=true' /></object></div>
+                            <p>*Chi Square Goodness of Fit was conducted on each variable separately.  None of the variables fit a normal distribution (p-value < 0.05). </p>
+                                </div><!-- chi -->
+                                
+                        <div id="cov" style="height:600px; width: 1300px">
+                             <table style="width: 250px; font-size: 15px; float: left; margin: 10px 0 0 25px;">
+                              <tr>
+                                <th>Variable</th>
+                                <th>Rows</th>
+                              </tr>
+                                <tr>
+                                <td>src_ip</td>
+                                <td>0-3,726</td>
+                              </tr>
+                              <tr>
+                                <td>eventid</td>
+                                <td>3,726-3,729</td>
+                              </tr>
+                                <tr>
+                                <td>sensor</td>
+                                <td>3,729-3,787</td>
+                             </tr>
+                            <tr>
+                                <td>Country</td>
+                                <td>3,787-3,894</td>
+                             </tr>
+                            <tr>
+                                <td>City</td>
+                                <td>3,894-4,954</td>
+                             </tr>
+                            </table>
+                            <img src="images/covariance_matrix.png" style="height:400px; width:620px; margin: 10px 0 0 10px;"></img>
+                            </div><!-- cov -->
+                            
+                            <div id="poisson" style="height:700px; width: 1400px; padding: 10px 0 20px 340px;">
+                                <img src="images/poisson_cdf.png" style="height:400px; width:600px" />
+                            </div><!-- poisson_chart -->
+
+                    </div><!-- box2 -->
+				<button class="toggle active">Models</button>
+				<div id = "box3" style="display:none">
+					<p></p>
+				<div class="btn-group">
+                              <button class="rfc">Random Forest Classifier</button>   
+                              <button class="hyp">Hyperparameter Tuning</button>
+                              <button class="best">Best Model</button>
+                    </div><!-- btn-group -->                   
+                            
+                        <div id="rfc" style="height:600px; width: 1300px; padding: 30px 0 0 30px;">
+                            <p>Sample size: 9,497
+                                <br/>Cross Validation (x10) Accuracy Lowest Score: 99.438065%
+                                        
+                            </ul>
+                            </p>
+                                <img src="images/rfc.png" style="height:500px; width:1200px;
+                                                             margin: 0 500px 0 0;"/>
+                            </div><!-- rfc -->
+                            
+                       <div id="hyp" style="height:600px; width: 1300px;">
+                           <p> Assumptions: Supervised Learning; Classification with a multiclass target variable
+                            <br/><br/>Sample Size: 100; 1,000
+                            <br/><br/>Models Selected: Multinomial Logistic Regression, Support Vector Machine (SVM), and Multinomial Naive Bayes
+                           <br/><br/>
+
+                            Model Summaries:
+                              <ul style="text-indent: 50px;">
+                                <li style="text-decoration: underline;">Multinomial Logistic Regression</li>
+                                  <p style="margin: -20px 0 0 0; text-indent: 100px;">Multinomial Logistic Regression is used to find linear relationship between multiclass categories. Fundamental functions include the logit function (calculate probabilities) and assumption of variable independence during binary comparisons. </p>
+                                  
+                                <li style="text-decoration: underline;">SVM</li>
+                                  <p style="margin: -20px 0 0 0; text-indent: 100px;">SVM is used to find linear separation between multiclass categories. Fundamental functions include maximum Euclidean distance, soft-margin, and a binary (one-versus-all) approach. </p>
+                                  
+                                <li style="text-decoration: underline;">Multinomial Naive Bayes</li>
+                                  <p style="margin: -20px 0 0 0; text-indent: 100px;">Multinomial Naive Bayes classifier is used to find linear relationships of the features based on probabilities. Fundamental functions include maximum likelihood calculations and assumption of a single multinomial distribution of the variable. </p>
+                              </ul>
+                           </p>
+                           <table style="width: 1000px; font-size: 12px;">   
+                            <tr>
+                                <th>Model</th>
+                                <th>Parameter 1</th>
+                                <th>Values 1</th>
+                                <th>Parameter 2</th>
+                                <th>Values 2</th>
+                                <th>Parameter 3</th>
+                                <th>Values 3</th>
+                              </tr>
+                              <tr>
+                                <td>Logistic Regression</td>
+                                <td>Multi-class</td>
+                                <td>multinomial</td>
+                                <td>Solver</td>
+                                <td>[newton-cg, lbfgs, sag, saga]</td>
+                                <td>C</td>
+                                <td>C range</td>
+                              </tr>
+                            <tr>
+                                <td>Support Vector Machine (SVM)</td>
+                                <td>C</td>
+                                <td>[0.01, 0.1, 1, 10, 100]</td>
+                                <td>Gamma</td>
+                                <td>[0.01, 0.1, 1, 10, 100]</td>
+                                <td>Kernel</td>
+                                <td>[linear, poly, rbf, sigmoid]</td>
+                             </tr>
+                               <tr>
+                                 <td>Multinomial Naive Bayes (MNB)</td>
+                                <td>Alpha</td>
+                                <td>[0.01,0.1, 0.5, 1]</td>
+                                <td>Fit Prior</td> 
+                                <td>[True, False]</td>
+                                <td> N/A </td>
+                                <td> N/A </td>
+                             </tr>
+                           </table>
+                        </div><!-- hyp -->
+
+                        <div id="best" style="height:600px; width: 1300px;">
+                          <p>
+                              Multinomial Naive Bayes Classifier wins!
+                              <br/><br/>
+                              Batch Sizes: 15,000 & 1,000 <br/>
+                              Averaged Accuracy Score: 95.3% <br/>
+                              Averaged AUC Score: 98.22%
+                        </p>
+                        <img src="images/confusion_matrix.png" style="height:400px; width:600px" /><img src="images/classification_report.png" style="height:400px; width:600px" />
+                        </div><!-- hyp -->
+
+				</div><!-- box3 -->
+			</div><!-- win1 -->
+			<div id="footer">
+					DATS 6501 Data Science Capstone ~
+					George Washington University ~
+                    <script>var d= new Date(); var dd= d.getDate(); var mm = d.getMonth()+1; var yyyy = d.getFullYear(); document.write(mm+'/'+dd+'/'+yyyy);</script>
+				</div><!-- footer -->
+		</div><!-- site_content -->
+	</div><!-- main -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
