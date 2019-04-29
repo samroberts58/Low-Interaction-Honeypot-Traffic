@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Low-Interaction Honeypot Traffic</title>
+	<link rel="stylesheet" href="bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+	<div id="main">
+		<div id="header">
+			<div id="logo">
+				<div id="logo_text">
+					<h1>Low-Interaction Honeypot Traffic</h1>
+					<h2>Modeling an Attacker's Search</h2>
+				</div><!-- logo_text -->
+			</div><!-- logo -->
+		</div><!-- header -->
+		<div id="menubar">
+			<div class="dropdown">
+				<h3><img src="images/menu_btn.png" style="height:25px; width:25px"/> </h3>
+				<div class="menu">
+					<ul>
+					<li class="selected"><a href="index.html">Home</a></li>
+					<li><a href="overview.html">Project Overview</a></li>
+					<li><a href="analysis.html">Analysis</a></li>
+					<li><a href="conclusion.html">Conclusion</a></li>
+                    <li><a href="about.html">About Me</a></li>
+					</ul>
+				</div><!-- menu -->
+			</div><!-- dropdown -->
+		</div><!-- menu_bar -->
+		<div id="site_content">
+			<div id="win1">
+				<h3>Recommendations for Future Research</h3>
+                <p>One way to elaborate on the project's goal would be to include additional data points. Location elements scored highly with the Random Forest Classifier's feature importances function.  It could be beneficial to incorporate publicly-available information, like country holidays or significant political events, as a way to identify a relationship with broader social and cultural influences and attack parameters.
+                <br/><br/> 
+                Another recommendation would be to improve upon the Multinomial Naive Bayes's success by creating a more in-depth recurring neural network.  This data set's features were well-aligned to classification, and a neural network implementation could incorporate the implicit relationships between variables, which is counter to Naive Bayes' foundation. 
+                <br/><br/> 
+                Lastly, it would be beneficial to replicate this project with another independent data set to verify the results are applicable to a greater population. 
+                </p>
+                <br/><br/>
+                <h3>Conclusion</h3>
+				<p> This project attempted to utilize data gathered from a network of low-interaction honeypots to explore the predictability of incoming, hostile network traffic to various destination ports. The high accuracy rate of the resulting Multinomial Naive Bayes model supports the ability to refine company cybersecurity strategies based on information from an economical honeypot solution. This information could be applied to create dynamic firewall rules as a preventative measure to protecting company assets.
+				</p>
+                <br/><br/>
+                <h3>References</h3>
+                <p>  
+                Schiller, T., & Peter, E. (n.d.). Retrieved from  https://www.cse.wustl.edu/~jain/cse571-09/ftp/honey/#sec3.1
+                </p>
+			</div><!-- win1 -->
+			<div id="footer">
+					DATS 6501 Data Science Capstone ~
+					George Washington University ~
+                    <script>var d= new Date(); var dd= d.getDate(); var mm = d.getMonth()+1; var yyyy = d.getFullYear(); document.write(mm+'/'+dd+'/'+yyyy);</script>
+				</div><!-- footer -->
+		</div><!-- site_content -->
+	</div><!-- main -->
+</body>
+</html>

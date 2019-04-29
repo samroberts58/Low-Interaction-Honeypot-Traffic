@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Low-Interaction Honeypot Traffic</title>
+	<link rel="stylesheet" href="bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+	<div id="main">
+		<div id="header">
+			<div id="logo">
+				<div id="logo_text">
+					<h1>Low-Interaction Honeypot Traffic</h1>
+					<h2>Modeling an Attacker's Search</h2>
+				</div><!-- logo_text -->
+			</div><!-- logo -->
+		</div><!-- header -->
+		<div id="menubar">
+			<div class="dropdown">
+				<h3><img src="images/menu_btn.png" style="height:25px; width:25px"/> </h3>
+				<div class="menu">
+					<ul>
+					<li class="selected"><a href="index.html">Home</a></li>
+					<li><a href="overview.html">Project Overview</a></li>
+					<li><a href="analysis.html">Analysis</a></li>
+					<li><a href="conclusion.html">Conclusion</a></li>
+                    <li><a href="about.html">About Me</a></li>
+					</ul>
+				</div><!-- menu -->
+			</div><!-- dropdown -->
+		</div><!-- menu_bar -->
+		<div id="site_content">
+			<div id="win1">
+				<p>
+				Welcome!
+                <br/><br/> Cybersecurity is a critical part of the architecture of most companies and organizations in the modern age. There is no emphasized business or industry that is solely victimized by cyber attacks and exploitation. As such, cyber security and defense strategies can be useful to all.
+                </p>
+                <div id="map" style="height:700px; width: 1400px; padding: 10px 0 -50px 50px;"> <script type='text/javascript' src='https://us-east-1.online.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 1200px; height: 550px;'><object class='tableauViz' width='1200' height='550' style='display:none;'><param name='host_url' value='https%3A%2F%2Fus-east-1.online.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;sroberts' /><param name='name' value='DATS6501-Capstone&#47;indexWorldMap' /><param name='tabs' value='no' /><param name='toolbar' value='no' /><param name='showAppBanner' value='false' /><param name='filter' value='iframeSizedToWindow=true' /></object></div>
+                </div><!-- map -->
+                <p style="margin: -100px 0 0 0;">
+                Honeypots are a cybersecurity defensive tool used to deflect intrusive attempts and record attacker behaviors by capturing network traffic.  They emulate an organization's internal structure with false data, and vary in their responsiveness to attackers. High-interaction honeypots are capable of simulating traffic responses and collecting conversational data elements, whereas low-interaction honeypots are intended for traffic collection with no responses. Therefore, low-interaction honeypots are generally less costly and require fewer resources to maintain.
+                </p>
+                <table  style="width: 700px; font-size: 12px;">
+                  <tr>
+                    <th>Honeypot</th>
+                    <th>Interaction Level</th>
+                    <th>OS Emulation</th>
+                    <th>Price</th>
+                    <th>Open/Closed Source</th>
+                  </tr>
+                    <tr>
+                    <td>honeyd</td>
+                    <td>Low</td>
+                    <td>Yes</td>
+                    <td>Free</td>
+                    <td>Open</td>
+                  </tr>
+                  <tr>
+                    <td>HoneyBOT</td>
+                    <td>Low</td>
+                    <td>No</td>
+                    <td>Free</td>
+                    <td>Closed</td>
+                  </tr>
+                    <tr>
+                    <td>Specter</td>
+                    <td>High</td>
+                    <td>Yes</td>
+                    <td>$599 - Light Version <br/> $899 - Full Version</td>
+                    <td>Closed</td>
+                 </tr>
+                </table>(Schiller & Peter, n.d.)
+                <p> 
+                The analytical potential varies based on the amount and quality of data a honeypot collects.  For this reason, low-interaction honeypots require robust modeling with fewer features to accomplish successful evaluation.
+
+                <br/><br/>This project designed a method for evaluating low-interaction honeypot traffic that could lead to data-informed cybersecurity decisions for companies that may not have the option for more robust honeypot network technologies.
+				</p>
+
+			</div><!-- win1 -->
+			<div id="footer">
+					DATS 6501 Data Science Capstone ~
+					George Washington University ~
+                    <script>var d= new Date(); var dd= d.getDate(); var mm = d.getMonth()+1; var yyyy = d.getFullYear(); document.write(mm+'/'+dd+'/'+yyyy);</script>
+				</div><!-- footer -->
+		</div><!-- site_content -->
+	</div><!-- main -->
+</body>
+</html>

@@ -1,0 +1,30 @@
+Site Contents and Navigation:
+
+Homepage -> Introduction, project purpose. Low-interaction vs high-interaction honeypot comparison.
+
+Project Overview:
+Objectives -> Capstone requirements
+Project Design -> Project phases to address the objectives
+
+Analysis:
+* EDA, Stat Tests, Model windows are collapsible toggles. Submenu's within each are toggled display: active/none and intended to flow from left to right.
+1) EDA
+	- Basic Charts
+	- Scatterplots
+	- Interaction Plot
+2) Stat Tests
+	- Chi Square Tests
+	- Covariance Matrix
+	- Probability Distribution
+3) Models
+	- Random Forest Classifier
+	- Hyperparameter Tuning
+	- Best Model
+
+Conclusion:
+Future Research Recommendations -> Ways to improve upon the project
+Conclusion -> Summary goal statement
+References -> Citation for table on homepage
+
+About Me:
+Biography and contact information	
