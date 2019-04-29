@@ -1,0 +1,43 @@
+Original Data Set & JSON files 		**Reference Files: Heisenberg_toCSV.py
+1) Download data from Rapid7's website (https://opendata.rapid7.com/heisenberg.cowrie/)
+2) Unzip the file of JSON's to current working directory.
+3) Run 'Heisenberg_toCSV.py' to pull each file by name and rewrite to CSV.  
+	Ensure current working directory in Python is set to folder with the unzipped JSONs.
+
+
+CSV's					** Reference Files: 10 .CSV's in current working directory
+4) Move the CSVs to a new folder named 'CSVs'.
+5) All unique Source IP addresses were identified by creating each separate src_ip file.  
+	The list of unique src_ip values was copied and ran through an IP lookup website (https://ip2geo.org/). 
+	IP geography data (Country, City) was pulled in batches of 10,000, and the data was saved in a master file called 'src_ip_lookup.csv'. 
+		*Individual src_ip files (src_ip_1_0_0.csv, src_ip_1_1_0.csv, etc.) were deleted after unique src_ip addresses
+		had been copied into the main file (src_ip_lookup.csv).
+5) Do VLOOKUP operations to copy source IP information in each of the CSV files ('CSV_1_0_0', 'CSV_1_1_0', etc.).
+6) Change the data type of 'ts' to long date format in each file to represent date and hour elements.
+7) Remove any nulls for ts, src_ip, session, eventid, sensor, Country, or City.
+8) Reorder columns of each CSV file to the following sequence: src_port, dst_port, ts, src_ip, session, duration, eventid, sensor, Country, City
+	*Delete Username and Password features at this time due to hidden characters, which causes an import error for SQL Server.
+
+
+SQL Server Management Studio (SSMS)	**Reference Files: CreateFinaltbl.sql, DataPreprocessing.sql
+9) Create a database named "Heisenberg_Honeypot".
+10) Import each CSV into SSMS. 
+11) Combine all tables into one master table for analysis. (CreateFinaltbl.sql)
+12) Review each variable separately, noting blanks, N/A's, and other erroneous entries.
+13) Drop src_port and duration columns (Right click on column, delete from Object Explorer)
+14) Remove blanks, #N/A, 0 from dst_port, eventid, and Country columns.
+15) Rename City blanks, #N/A's, and '0' to 'N/A'.
+16) Delete all Netherland entries from Country column.
+
+Final Data Set Metadata:
+8 Features:
+	- dst_port: Destination Port
+	- ts: Time Stamp
+	- src_ip: Source IP Address
+	- session: Session ID
+	- eventid: Type of action taken
+	- sensor: Honeypot name identifier
+	- Country: Source IP address country location
+	- City: Source IP address city location
+
+852,981 rows
