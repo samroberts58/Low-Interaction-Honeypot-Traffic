@@ -14,7 +14,7 @@ function changeImage() {
 }
 
 //setInterval is used to create animation
-var intervalHandle = setInterval(changeImage, 7000);
+var intervalHandle = setInterval(changeImage, 10000);
 
 myImage.onclick = function() {
 	clearInterval(intervalHandle);
