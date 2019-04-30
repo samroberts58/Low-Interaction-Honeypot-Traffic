@@ -1,6 +1,7 @@
 # Low-Interaction Honeypot Traffic: Modeling an Attacker’s Search
 Samantha Roberts, M.S. Data Science <br/>
-George Washington University
+George Washington University <br/>
+[![DOI](https://zenodo.org/badge/179867123.svg)](https://zenodo.org/badge/latestdoi/179867123)
 
 ## Introduction
 
