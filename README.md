@@ -12,6 +12,8 @@ This is a data science capstone project for graduate-level evaluation.  The purp
 
 Honeypots are a cybersecurity defensive tool used to deflect intrusive attempts and record attacker behaviors. This project utilizes network traffic recorded from a network of low-interaction honeypots as the foundation for a real-world cybersecurity problem.  Many private and public entites may experience intrusive cybersecurity attacks but lack resources for an elaborate high-interaction honeypot solution.  For these organizations, using a low-interaction honeypot may be a more feasible approach.  The goal of this project is to find actionable intelligence from low-interaction honeypots as a budget-friendly response to cybersecurity needs.  It is hoped that successful trend modeling and predictive analysis can assist with identifying an entity's targeted entry locations and common tactics to provide the basis for security system hardening best practices.
 
+The associated website and visualizations can be seen at https://samroberts58.github.io/Low-Interaction-Honeypot-Traffic/.
+
 
 ### Data Set Information:
 
